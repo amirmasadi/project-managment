@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>Project Manager</title>
+    <link ref="stylesheet" th:href="@{/css/styles.css}" >
+</head>
+
+<nav th:fragment="navbar" class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Project Manager</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+                <a class="nav-link" th:href="@{/employee}">Employees</a>
+                <a class="nav-link" th:href="@{/project}">Projects</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<table class="table table-dark table-striped" th:fragment="projectsTable">
+    <thead>
+    <tr>
+        <th scope="col">Project</th>
+        <th scope="col">Stage</th>
+        <th scope="col">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="project : ${projectsList}">
+        <td th:text="${project.name}"/>
+        <td th:text="${project.stage}"/>
+        <td th:text="${project.description}"/>
+    </tr>
+    </tbody>
+</table>
+
+<table class="table table-dark table-striped" th:fragment="employeesTable">
+    <thead>
+    <tr>
+        <th scope="col">first name</th>
+        <th scope="col">last name</th>
+        <th scope="col">current projects</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee : ${employeeList}">
+        <td th:text="${employee.firstName}"/>
+        <td th:text="${employee.lastName}"/>
+        <td th:text="${employee.projectCount}"/>
+    </tr>
+    </tbody>
+</table>
+</html>
