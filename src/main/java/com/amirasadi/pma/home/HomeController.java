@@ -1,13 +1,10 @@
-package com.amirasadi.pma.controllers;
+package com.amirasadi.pma.home;
 
-import com.amirasadi.pma.dao.IEmployeeRepository;
-import com.amirasadi.pma.dao.IProjectRepository;
-import com.amirasadi.pma.dto.ChartData;
-import com.amirasadi.pma.dto.EmployeeProject;
-import com.amirasadi.pma.entities.Employee;
-import com.amirasadi.pma.entities.Project;
-import com.amirasadi.pma.services.EmployeeService;
-import com.amirasadi.pma.services.ProjectService;
+import com.amirasadi.pma.shared.dto.ChartData;
+import com.amirasadi.pma.shared.dto.EmployeeProject;
+import com.amirasadi.pma.project.Project;
+import com.amirasadi.pma.employee.EmployeeService;
+import com.amirasadi.pma.project.ProjectService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

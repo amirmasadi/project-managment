@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="layouts :: header"></head>
+<head th:replace="~{layouts :: header}"></head>
 
 <body>
 
-<bav th:replace="layouts :: navbar"></bav>
+<bav th:replace="~{layouts :: navbar}"></bav>
 
 <div class="container-sm">
     <form action="/employee/save" method="POST" th:object="${employee}">

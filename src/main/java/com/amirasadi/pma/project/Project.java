@@ -1,5 +1,6 @@
-package com.amirasadi.pma.entities;
+package com.amirasadi.pma.project;
 
+import com.amirasadi.pma.employee.Employee;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

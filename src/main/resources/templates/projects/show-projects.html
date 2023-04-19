@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layouts :: header"></head>
+<head th:replace="~{layouts :: header}"></head>
 <body>
-<nav th:replace="layouts :: navbar"></nav>
+<nav th:replace="~{layouts :: navbar}"></nav>
 <div class="container-sm">
     <a class="btn btn-primary my-5" th:href="@{/project/new}">Add Project</a>
     <section class="mb-10 projectsTable">
         <h3>Projects:</h3>
-        <table th:replace="layouts :: projectsTable"></table>
+        <table th:replace="~{layouts :: projectsTable}"></table>
     </section>
 </div>
 </body>

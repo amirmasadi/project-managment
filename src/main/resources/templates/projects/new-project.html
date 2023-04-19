@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layouts :: header"></head>
+<head th:replace="~{layouts :: header}"></head>
 
 <body>
 
-<nav th:replace="layouts :: navbar"></nav>
+<nav th:replace="~{layouts :: navbar}"></nav>
 <div class="container-sm">
     <form action="/project/save" method="POST" th:object="${project}">
         <div class="mb-3">

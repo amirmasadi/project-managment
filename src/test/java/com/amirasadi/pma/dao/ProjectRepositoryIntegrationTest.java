@@ -1,6 +1,7 @@
 package com.amirasadi.pma.dao;
 
-import com.amirasadi.pma.entities.Project;
+import com.amirasadi.pma.project.IProjectRepository;
+import com.amirasadi.pma.project.Project;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

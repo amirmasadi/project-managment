@@ -1,8 +1,6 @@
-package com.amirasadi.pma.services;
+package com.amirasadi.pma.project;
 
-import com.amirasadi.pma.dao.IProjectRepository;
-import com.amirasadi.pma.dto.ChartData;
-import com.amirasadi.pma.entities.Project;
+import com.amirasadi.pma.shared.dto.ChartData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

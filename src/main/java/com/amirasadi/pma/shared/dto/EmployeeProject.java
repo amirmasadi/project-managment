@@ -1,4 +1,4 @@
-package com.amirasadi.pma.dto;
+package com.amirasadi.pma.shared.dto;
 
 public interface EmployeeProject {
 //  we have to begin methods names with 'get'

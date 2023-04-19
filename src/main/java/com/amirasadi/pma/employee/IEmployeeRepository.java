@@ -1,7 +1,6 @@
-package com.amirasadi.pma.dao;
+package com.amirasadi.pma.employee;
 
-import com.amirasadi.pma.dto.EmployeeProject;
-import com.amirasadi.pma.entities.Employee;
+import com.amirasadi.pma.shared.dto.EmployeeProject;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

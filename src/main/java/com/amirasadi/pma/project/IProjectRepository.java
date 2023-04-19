@@ -1,7 +1,6 @@
-package com.amirasadi.pma.dao;
+package com.amirasadi.pma.project;
 
-import com.amirasadi.pma.dto.ChartData;
-import com.amirasadi.pma.entities.Project;
+import com.amirasadi.pma.shared.dto.ChartData;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

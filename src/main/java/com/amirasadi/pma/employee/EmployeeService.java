@@ -1,8 +1,6 @@
-package com.amirasadi.pma.services;
+package com.amirasadi.pma.employee;
 
-import com.amirasadi.pma.dao.IEmployeeRepository;
-import com.amirasadi.pma.dto.EmployeeProject;
-import com.amirasadi.pma.entities.Employee;
+import com.amirasadi.pma.shared.dto.EmployeeProject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

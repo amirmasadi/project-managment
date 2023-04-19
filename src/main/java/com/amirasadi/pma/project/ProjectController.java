@@ -1,11 +1,9 @@
-package com.amirasadi.pma.controllers;
+package com.amirasadi.pma.project;
 
-import com.amirasadi.pma.dao.IEmployeeRepository;
-import com.amirasadi.pma.dao.IProjectRepository;
-import com.amirasadi.pma.entities.Employee;
-import com.amirasadi.pma.entities.Project;
-import com.amirasadi.pma.services.EmployeeService;
-import com.amirasadi.pma.services.ProjectService;
+import com.amirasadi.pma.employee.Employee;
+import com.amirasadi.pma.project.Project;
+import com.amirasadi.pma.employee.EmployeeService;
+import com.amirasadi.pma.project.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
