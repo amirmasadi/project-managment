@@ -10,9 +10,14 @@ public interface  IEmployeeRepository extends CrudRepository<Employee, Long> {
   @Override
   List<Employee> findAll();
 
-  @Query(nativeQuery = true, value = "SELECT e.first_name as firstName, e.last_name as lastName, COUNT(pe" +
+  @Query(nativeQuery = true, value = "SELECT e.employee_id as employeeId, e.first_name as firstName, e.last_name as lastName, " +
+          "COUNT" +
+          "(pe" +
           ".employee_id) as projectCount " +
-          "FROM EMPLOYEE e LEFT JOIN PROJECT_EMPLOYEE pe ON e.employee_id = pe.employee_id GROUP BY e.first_name, e.last_name ORDER BY 3 DESc")
+          "FROM EMPLOYEE e LEFT JOIN PROJECT_EMPLOYEE pe ON e.employee_id = pe.employee_id GROUP BY e.employee_id, e" +
+          ".first_name, e.last_name ORDER BY 3 DESc")
   List<EmployeeProject> employeeProject();
+
+  Employee findByEmployeeId(long id);
 }
 

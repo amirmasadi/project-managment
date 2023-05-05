@@ -28,10 +28,11 @@
         <div>
             <select class="form-select" multiple aria-label="multiple select" th:field="${project.employees}">
                 <option th:each="employee : ${employeesList}"
-                        th:value="${employee.id}"
+                        th:value="${employee.employeeId}"
                         th:text="${employee.firstName}"></option>
             </select>
         </div>
+        <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
 
         <button type="submit" class="btn btn-primary">Create</button>
     </form>

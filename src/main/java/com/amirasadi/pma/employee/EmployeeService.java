@@ -11,15 +11,23 @@ public class EmployeeService {
   @Autowired
   IEmployeeRepository empRepo;
 
-  public Employee save(Employee emp){
+  public Employee save(Employee emp) {
     return empRepo.save(emp);
   }
 
-  public List<Employee> findAll(){
+  public List<Employee> findAll() {
     return empRepo.findAll();
   }
 
-  public List<EmployeeProject> employeeProject(){
+  public List<EmployeeProject> employeeProject() {
     return empRepo.employeeProject();
+  }
+
+  public void deleteEmpById(long id) {
+    empRepo.deleteById(id);
+  }
+
+  public Employee findByEmployeeId(long id) {
+    return empRepo.findByEmployeeId(id);
   }
 }

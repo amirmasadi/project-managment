@@ -9,6 +9,9 @@
 
 <div class="container-sm">
     <form action="/employee/save" method="POST" th:object="${employee}">
+        <!--if we don't add the following input with id in it every time we edit an employee a new employee will be
+added-->
+        <input type="hidden" th:field="${employee.employeeId}">
         <div class="mb-3">
             <label for="firstName" class="form-label">first Name:</label>
             <input type="text" class="form-control" id="firstName" th:field="${employee.firstName}">
@@ -21,6 +24,7 @@
             <label for="email" class="form-label">Email:</label>
             <input type="email" class="form-control" id="email" th:field="${employee.email}">
         </div>
+        <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
 
         <button type="submit" class="btn btn-primary">add</button>
     </form>

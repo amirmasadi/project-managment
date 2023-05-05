@@ -48,6 +48,8 @@
         <th scope="col">first name</th>
         <th scope="col">last name</th>
         <th scope="col">current projects</th>
+        <th scope="col">Action</th>
+
     </tr>
     </thead>
     <tbody>
@@ -55,6 +57,12 @@
         <td th:text="${employee.firstName}"/>
         <td th:text="${employee.lastName}"/>
         <td th:text="${employee.projectCount}"/>
+        <td>
+            <a type="button" class="btn btn-info" th:href="@{/employee/update(id=${employee.employeeId})}">Edit
+            </a>
+            <a type="button" class="btn btn-danger"
+                    th:href="@{/employee/delete(id=${employee.employeeId})}">Delete</a>
+        </td>
     </tr>
     </tbody>
 </table>

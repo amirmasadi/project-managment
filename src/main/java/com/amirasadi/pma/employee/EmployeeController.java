@@ -4,9 +4,7 @@ import com.amirasadi.pma.shared.dto.EmployeeProject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,7 +23,7 @@ public class EmployeeController {
     @PostMapping("/save")
     public String saveNewEmployee(Employee employee) {
         empService.save(employee);
-        return "redirect:/employee/new";
+        return "redirect:/employee";
     }
 
     @GetMapping
@@ -33,5 +31,17 @@ public class EmployeeController {
         List<EmployeeProject> employeeList = empService.employeeProject();
         model.addAttribute("employeeList", employeeList);
         return "employees/show-employees";
+    }
+
+    @GetMapping("/delete")
+    public String deleteEmp(@RequestParam("id") long id){
+        empService.deleteEmpById(id);
+        return "redirect:/";
+    }
+    @GetMapping("/update")
+    public String updateEmp(@RequestParam("id") long id, Model model){
+        Employee theEmp = empService.findByEmployeeId(id);
+        model.addAttribute("employee", theEmp);
+        return "employees/new-employee";
     }
 }
